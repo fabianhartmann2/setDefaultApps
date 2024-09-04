@@ -2,20 +2,20 @@
 SetDefaultApps allows you to set default applications for macOS by a configuration profile.
 Only configurations via MDM are allowed. Local plist files will be ignored.
 
-To set the default Apps run: `/Library/Application\ Support/Intellec/com.intellec.setDefaultApps/DefaultApps`
+To set the default Apps run: `/Library/Application\ Support/Appfruit/ch.appfruit.DefaultApps/DefaultApps`
 
 Make sure to have set a configuration profile before, otherwise you get a _Only settings set by MDM are allowed._
 
 ### Triggers
 Multiple triggers can be applied to a handler modification entry. This allows you to group multiple handler modifications together and run them together by specifying the triggername as an argument when running the command.
 
-`/Library/Application\ Support/Intellec/com.intellec.setDefaultApps/DefaultApps trigger1`
+`/Library/Application\ Support/Appfruit/ch.appfruit.DefaultApps/DefaultApps trigger1`
 If no trigger is specified, the default trigger named "default" is ueed.
 
 At least one trigger has to be defined as part of the handler modification entry. If not, it'll never be applied.
 
 ## Configuration Profile
-setDefaultApps listens to the __com.intellec.defaultapps__ settings domain.
+setDefaultApps listens to the __ch.appfruit.DefaultApps__ settings domain.
 It has to have am array called __force__ containing dictionaries with the folowwing keys:
 
 Key | Type | Value
@@ -91,4 +91,4 @@ For example to set the default browser the config looks like this:
 
 ```
 
-Have a look at the triggers, there are multiple triggers specified. If you run `/Library/Application\ Support/Intellec/com.intellec.setDefaultApps/DefaultApps` without specifying any triggername, "default" will be used and therefore all handler modification entries containing default as trigger will be run.
+Have a look at the triggers, there are multiple triggers specified. If you run `/Library/Application\ Support/Appfruit/ch.appfruit.DefaultApps/DefaultApps` without specifying any triggername, "default" will be used and therefore all handler modification entries containing default as trigger will be run.

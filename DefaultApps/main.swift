@@ -9,7 +9,7 @@
 import Foundation
 
 // ---- DEFINITIONS ----
-// var settingsdomain = "com.intellec.defaultapps"
+// var settingsdomain = "ch.appfruit.DefaultApps"
 // var settingskey = "force"
 let stderr = FileHandle.standardError
 let stdout = FileHandle.standardOutput
@@ -101,6 +101,6 @@ func setdefaults(_ settingskey: String, settingsdomain: String) {
 
 
 // call function for setting the DefaultApp by provide the domain containing the settings and the key storing the policy
-setdefaults("force" ,settingsdomain: "com.intellec.defaultapps")
+setdefaults("force" ,settingsdomain: "ch.appfruit.DefaultApps")
 
- print("\n\nCreated by Fabian Hartmann on 10.08.17.\nCopyright © 2017 Intellec AG. All rights reserved.")
+ print("\n\nMaintained by Fabian Hartmann on 04.09.2024.\nCopyright © 2017 Intellec AG. All rights reserved.")
